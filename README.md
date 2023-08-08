@@ -1,5 +1,7 @@
 # MathTrainer
 
+https://github.com/SaulWyrm/mathTrainer/assets/104003925/dd9feba5-9fd9-4c15-80ac-b51b7fd1c62b
+
 ### Eng
 
 This app is meant as a trainer and a collection of lectures on a field of Algebra. Lectures can be accessed within specific submodule of an app and then a topic can be selected within presented. The trainer part is comprissed of small games like 'Guess the number', autogenerating math expression and a module of testing. The last module is dependant on a txt file in bin\Degub\TestFiles location of project. In this file a teacher can specify questions that an app should output for ursers of the app (students). The file has special syntax to work:
@@ -26,12 +28,15 @@ Language of an app: Russian only.
 Diagrams/Диаграммы:
 
 ![image](https://github.com/SaulWyrm/mathTrainer/assets/104003925/9c143417-18ea-44f9-8c27-c4d09e6428af)
-State transition diagram/Диаграмма переходов состояний
+
+*State transition diagram/Диаграмма переходов состояний*
 
 ![image](https://github.com/SaulWyrm/mathTrainer/assets/104003925/29d4669c-fec3-4414-a20a-652ce58bd33f)
-Activity diagram/Диаграмма деятельности
+
+*Activity diagram/Диаграмма деятельности*
 
 ![image](https://github.com/SaulWyrm/mathTrainer/assets/104003925/b975e807-eddf-485f-a687-9cf3f7a4b6fb)
-Functional diagram/Функциональная схема
+
+*Functional diagram/Функциональная схема*
 
 
