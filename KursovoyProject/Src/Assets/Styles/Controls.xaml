@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Window" x:Key="WindowBasic">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Icon" Value="pack://application:,,,/../Images/favicon.ico"/>
+        <Setter Property="Height" Value="360"/>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="MinHeight" Value="360"/>
+        <Setter Property="MinWidth" Value="400"/>
+        <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
+        <Setter Property="WindowStyle" Value="None"/>
+        <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="BorderThickness" Value="0"/>
+
+
+    </Style>
+
+    <Style TargetType="Border" x:Key="OuterWindowBorder">
+        <Setter Property="CornerRadius" Value="15"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Padding" Value="4"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="InnerBorder">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="pack://application:,,,/../Images/background.jpg"
+                                ViewportUnits="Absolute"
+                                TileMode="Tile"
+                                Stretch="None"
+                                AlignmentX="Left"
+                                AlignmentY="Top" 
+                                Viewport="0,0,200,200"
+                            />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="descriptionLabel">
+        <Setter Property="FontFamily" Value="Monsterrat"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Padding" Value="15 30"/>
+        <Setter Property="Margin" Value="15 5"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}">
+        <Style.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="15" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+</ResourceDictionary>

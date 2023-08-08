@@ -1,0 +1,36 @@
+﻿<Window x:Class="KursovoyProject.Src.Games.Operations.OperationW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursovoyProject.Src.Games.Operations" xmlns:components="clr-namespace:KursovoyProject.Src.Components"
+        mc:Ignorable="d"
+        Title="Математические операции"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource WindowBasic}">
+    <Border Style="{StaticResource OuterWindowBorder}">
+        <Grid>
+            <Border Style="{StaticResource InnerBorder}">
+                <Grid x:Name="frmBody" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="34"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <components:WindowBar Grid.Row="0"/>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <components:AppBar Grid.Row="0"/>
+                        <Frame
+                x:Name="OperationFrame"
+                Grid.Row="1"
+                NavigationUIVisibility="Hidden"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+    
+</Window>

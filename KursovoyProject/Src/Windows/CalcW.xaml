@@ -1,0 +1,71 @@
+﻿<Window x:Class="KursovoyProject.Src.Windows.CalcW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursovoyProject.Src.Windows" xmlns:components="clr-namespace:KursovoyProject.Src.Components"
+        mc:Ignorable="d"
+        Title="Калькулятор"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource WindowBasic}">
+    <Window.Resources/>
+    <Border
+        Style="{StaticResource OuterWindowBorder}">
+        <Grid>
+            <Border Style="{StaticResource InnerBorder}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="34"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <components:WindowBar Grid.Row="0"
+                              MouseDown="Border_MouseDown"/>
+                    <Grid  
+                        Grid.Row="1" 
+                        Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="158*"/>
+                            <ColumnDefinition Width="159*"/>
+                            <ColumnDefinition Width="158*"/>
+                            <ColumnDefinition Width="159*"/>
+                            <ColumnDefinition Width="152*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox IsReadOnly="True" Name="Todo" FontSize="35" TextAlignment="Right"  Margin="10,10,4.041,10" VerticalAlignment="Center"   Grid.ColumnSpan="5" MaxLines="1" MaxLength="38"/>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="BCE" Grid.Row="1">CE</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="Bleft" Grid.Row="4" Grid.Column="0">(</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="Bright" Grid.Row="5" Grid.Column="0">)</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Bdiv" Grid.Row="1" Grid.Column="4" Margin="2,2,4.041,2">/</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Bsqrt" Grid.Row="2" Grid.Column="0">n√</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B7" Grid.Row="2" Grid.Column="1">7</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B8" Grid.Row="2" Grid.Column="2">8</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B9" Grid.Row="2" Grid.Column="3">9</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Bmul" Grid.Row="2" Grid.Column="4" Margin="2,2,4.041,2">*</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Bxn" Grid.Row="3" Grid.Column="0">x^n</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B4" Grid.Row="3" Grid.Column="1">4</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B5" Grid.Row="3" Grid.Column="2">5</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B6" Grid.Row="3" Grid.Column="3">6</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Bsub" Grid.Row="3" Grid.Column="4" Margin="2,2,4.041,2">-</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B1" Grid.Row="4" Grid.Column="1">1</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B2" Grid.Row="4" Grid.Column="2">2</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B3" Grid.Row="4" Grid.Column="3">3</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Badd" Grid.Row="4" Grid.Column="4" Margin="2,2,4.041,2">+</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Bxchg" Grid.Row="1" Grid.Column="3">±</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="B0" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="1">0</Button>
+                        <Button Style="{StaticResource CalcButton}" Name="Bcomma" Grid.Row="5" Grid.Column="3">,</Button>
+                        <Button Style="{StaticResource CalcOperationButton}" Name="Beq" Grid.Row="5" Grid.Column="4" Margin="2,2,4.041,2">=</Button>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

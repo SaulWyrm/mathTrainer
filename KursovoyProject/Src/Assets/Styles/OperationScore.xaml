@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style
+            TargetType="Label"
+            x:Key="LabelSimple">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style
+            TargetType="Label"
+            BasedOn="{StaticResource Label}"
+            x:Key="LabelResult">
+
+        <Setter Property="FontSize" Value="16"/>
+
+    </Style>
+</ResourceDictionary>

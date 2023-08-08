@@ -1,0 +1,64 @@
+﻿<Window x:Class="KursovoyProject.Src.Windows.TheoryW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursovoyProject.Src.Windows" xmlns:components="clr-namespace:KursovoyProject.Src.Components"
+        mc:Ignorable="d"
+        Title="Раздел теории" 
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource WindowBasic}"
+        AllowsTransparency="False">
+    <Window.Resources/>
+    <Border
+        Style="{StaticResource OuterWindowBorder}">
+        <Grid>
+            <Border
+                Style="{StaticResource InnerBorder}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="34"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <components:WindowBar Grid.Row="0"/>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <components:AppBar Grid.Row="0"/>
+                        <Grid Grid.Row="1"
+                                  Margin="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="39*"/>
+                                <ColumnDefinition Width="100*"/>
+                                <ColumnDefinition Width="25*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Foreground="white"
+                                Content="Имя страницы:"
+                                VerticalAlignment="Center"
+                                Grid.Column="0"/>
+                            <Button Grid.Column="2"
+                                    Style="{StaticResource TraverseButton}"
+                                    Content="Открыть" 
+                                    Click="Button_Click" 
+                                    Name="btnOpen"
+                                    Margin="2 0 0 0"/>
+                            <TextBox
+                                Grid.Column="1"
+                                Padding="5"
+                                Name="txtFileName"
+                                HorizontalAlignment="Stretch"/>
+                        </Grid>
+                        <WebBrowser 
+                            Name="articleBrowser"
+                            Grid.Row="2"
+                            Margin="5"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

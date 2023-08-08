@@ -1,0 +1,16 @@
+﻿<Application x:Class="KursovoyProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:KursovoyProject"
+             StartupUri="Src/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Src/Assets/Styles/NavBar.xaml"/>
+                <ResourceDictionary Source="Src/Assets/Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="Src/Assets/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="Src/Assets/Styles/Controls.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

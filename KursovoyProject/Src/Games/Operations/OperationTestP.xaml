@@ -1,0 +1,115 @@
+﻿<Page x:Class="KursovoyProject.Src.Games.Operations.OperationTestP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KursovoyProject.Src.Games.Operations"
+      mc:Ignorable="d" 
+      Title="Тест">
+    <Grid x:Name="frmAddTestBody">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Style="{StaticResource InnerBorder}"
+                Grid.Row="0"
+                Background="White"
+                Grid.ColumnSpan="3"
+                Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lblAddQues"
+               Grid.Row="0"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Content="Вопрос №"/>
+                <Label x:Name="lblAddQuesNum"
+               Grid.Row="0"
+               Grid.Column="1" 
+               Content="Number" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Center"/>
+                <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+                    Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label x:Name="lblAddSign"  
+               HorizontalAlignment="Left" 
+               Content="+"
+               VerticalAlignment="Center"  
+               FontSize="20" Margin="10,0,0,0" Width="23" Height="36"/>
+                        <StackPanel Orientation="Vertical">
+                            <Label x:Name="lblAddNum1" 
+               Content="Number1"
+               HorizontalAlignment="Left"  
+               VerticalAlignment="Top"  
+               FontSize="20"/>
+                            <Label x:Name="lblAddNum2" 
+               Content="Number2" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top"  
+               FontSize="20"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Separator x:Name="sepAdd" 
+                   HorizontalAlignment="Left" 
+                   Height="28" 
+                   VerticalAlignment="Top" 
+                   Width="131" Margin="10,2,0,2"/>
+                    <TextBox x:Name="txtbAddAnswer" 
+                 HorizontalAlignment="Left" 
+                 Height="23" 
+                 VerticalContentAlignment="Center"
+                 Padding="5 0 0 0"
+                 TextWrapping="Wrap" 
+                 Text="0" 
+                 VerticalAlignment="Top" 
+                 Width="173" 
+                 MouseEnter="txtbAddAnswer_MouseEnter" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Viewbox
+            Grid.Row="1"
+            Grid.Column="0">
+            <Button x:Name="btnAddNext" 
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="Вперед &gt;" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Center" 
+                IsDefault="True" 
+                Click="btnAddNext_Click"/>
+        </Viewbox>
+        <Viewbox
+            Grid.Row="1"
+            Grid.Column="1">
+            <Button x:Name="btnAddFinish" 
+                Content="Закончить" 
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Center" 
+                IsEnabled="False" 
+                Click="btnAddFinish_Click"/>
+        </Viewbox>
+    </Grid>
+</Page>

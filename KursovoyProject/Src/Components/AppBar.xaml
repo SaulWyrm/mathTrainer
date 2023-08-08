@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="KursovoyProject.Src.Components.AppBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KursovoyProject.Src.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Border BorderThickness="0 1 0 0" BorderBrush="LightGray">
+            <StackPanel 
+                Style="{StaticResource HeaderMenuStyle}"
+                Grid.Row="0"
+                x:Name="menuMain">
+                <Button
+                    Style="{StaticResource NavButton}"
+                    x:Name="menuCalc"
+                    Content="Калькулятор"
+                    Click="menuCalc_Click"
+                />
+                <Button
+                    Style="{StaticResource NavButton}"
+                    x:Name="menuArticles"
+                    Content="Теория"
+                    Click="menuTheory_Click"/>
+                <Button
+                    Style="{StaticResource NavButton}"
+                    x:Name="menuAbout"
+                    Content="Обо мне..."
+                    Click="menuAbout_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
